@@ -1,0 +1,114 @@
+﻿<Window x:Class="HW_WPF_Keyboard_Trainer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW_WPF_Keyboard_Trainer"
+        mc:Ignorable="d" Background="LightBlue"
+        Title="Keyboard Trainer" Height="550" Width="820" ResizeMode="NoResize" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+    <Grid>
+        <WrapPanel Margin="0,0,0,409" Background="Red" Width="800" Height="125"/>
+
+        <Button Content="Start" Margin="454,32,270,447" FontSize="15" Click="ButtonStart_Click"/>
+        <Button Content="Stop" Margin="604,33,121,447" FontSize="15" Click="ButtonStop_Click"/>
+        <Slider Margin="258,47,466,449" Value="0" Minimum="5" Maximum="15" ValueChanged="Slider_ValueChanged"/>
+        <TextBlock Name="DifficultyNum" Text="Difficulty: 5" FontSize="15" Margin="141,44,554,421"/>
+        <TextBlock Name="FailsNum" Text="Fails: 0" FontSize="15" Margin="46,44,686,382" Grid.Row="1"/>
+        <WrapPanel Name="panelBtn" Margin="25,152,25,282" Background="LightBlue" Width="400" Height="50"/>
+
+
+        <Grid Name="allBtn" Margin="0,277,0,2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Margin="0,0,0,127">
+                <Grid>
+                    <Button Content="`" Margin="0,10,731,10" FontSize="15" Height="45"/>
+                    <Button Content="1" Margin="54,10,678,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="2" Margin="106,10,625,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="3" Margin="159,10,572,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="4" Margin="212,10,519,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="5" Margin="265,10,466,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="6" Margin="318,10,413,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="7" Margin="371,10,360,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="8" Margin="424,10,307,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="9" Margin="477,10,254,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="0" Margin="530,10,201,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="-" Margin="583,10,148,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="+" Margin="636,10,95,10" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="Backspace" Margin="689,10,0,10" FontSize="15" Height="45"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,35">
+                <Grid Height="57">
+                    <Button Content="Tab" Margin="0,55,705,-35" FontSize="15" Height="45"/>
+
+                    <Button Content="Q" Margin="79,55,652,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="W" Margin="132,55,599,-35" FontSize="15" Height="45"/>
+                    <Button Content="E" Margin="186,55,546,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="R" Margin="239,55,493,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="T" Margin="292,55,440,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="Y" Margin="345,55,387,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="U" Margin="398,55,334,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="I" Margin="451,55,281,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="O" Margin="504,55,228,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="P" Margin="557,55,175,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="[" Margin="610,55,122,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="]" Margin="663,55,69,-35" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="\" Margin="716,55,0,-35" FontSize="15" Height="45"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Margin="0,-9,0,0" Grid.RowSpan="3">
+                <Grid>
+                    <Button Content="Caps Lock" Margin="0,100,678,-80" FontSize="15" Height="45"/>
+                    <Button Content="A" Margin="106,100,626,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="S" Margin="159,100,573,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="D" Margin="212,100,520,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="F" Margin="265,100,467,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="G" Margin="318,100,414,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="H" Margin="371,100,361,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="J" Margin="424,100,308,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="K" Margin="477,100,255,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="L" Margin="530,100,202,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content=";" Margin="583,100,149,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="'" Margin="636,100,96,-80" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="Enter" Margin="689,100,0,-80" FontSize="15" Height="45"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Margin="0,-9,0,0" Grid.RowSpan="4">
+                <Grid>
+                    <Button Name="leftShift" Content="Shift" Margin="0,145,660,-125" FontSize="15" Height="45"/>
+                    <Button Content="Z" Margin="133,145,599,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="X" Margin="185,145,547,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="C" Margin="238,145,494,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="V" Margin="291,145,441,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="B" Margin="344,145,388,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="N" Margin="397,145,335,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="M" Margin="450,145,282,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="," Margin="503,145,229,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="." Margin="556,145,176,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Content="/" Margin="609,145,123,-125" FontSize="15" Width="53" Height="45"/>
+                    <Button Name="rightShift" Content="Shift" Margin="670,145,0,-125" FontSize="15" Height="45"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Margin="0,30,0,35">
+                <Grid Height="70">
+                    <Button Name="leftCtrl" Content="Ctrl" Margin="0,150,704,-125" FontSize="15" Height="45"/>
+                    <Button Content="Win" Margin="96,150,626,-125" FontSize="15" Height="45"/>
+                    <Button Name="leftAlt" Content="Alt" Margin="174,150,547,-125" FontSize="15" Height="45"/>
+
+                    <Button Content="Space" Margin="253,150,244,-125" FontSize="15" Height="45"/>
+                    <Button Name="rightAlt" Content="Alt" Margin="556,150,165,-125" FontSize="15" Height="45"/>
+                    <Button Content="Apps" Margin="635,150,86,-125" FontSize="15" Height="45"/>
+                    <Button Name="rightCtrl" Content="Ctrl" Margin="714,150,0,-125" FontSize="15" Height="45"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
